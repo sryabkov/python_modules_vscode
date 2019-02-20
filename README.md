@@ -1,4 +1,4 @@
-# Python package/module management subtleties
+# Python package/module management and Visual Studio Code
 
 This repo illustrates differences between two ways to structure Python code and the differences related to the execution of unit tests and debuggability in Visual Studio Code
 
