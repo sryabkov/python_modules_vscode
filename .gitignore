@@ -1,0 +1,8 @@
+*.tgz
+
+# python.
+.pytest_cache
+__pycache__
+
+# visual studio code.
+.vscode
