@@ -95,9 +95,9 @@ Item | Option 1 | Option 2
 ---------|----------|---------
 Package (`__init__.py` present) | No | Yes
 Debug zero setup | Yes | No
-Debug Config | Python: Current File | Python: Module
+VS Debug Config | Python: Current File | Python: Module
 Execute code | `python3 sut.py` | `python3 -m option2.sut`
-Current work dir | `code\option1`| `code`
+Execute from directory | `code\option1`| `code`
 Relative module import | No | Yes
 Module import error | Yes | No
 Go to Definition works | No | Yes
