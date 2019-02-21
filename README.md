@@ -46,7 +46,9 @@ This option is easy to debug: just open `sut_test.py`, put a breakpoint on the l
 
 > If you have Python debug configurations, choose the `Python: Current File` one.
 
-`pytest` runs with no problems. You can execute `sut_test.py` by running `python3 sut_test.py` from the `option1` directory.
+`pytest` runs with no problems from the root of the repo.
+
+You can execute `sut_test.py` by running `python3 sut_test.py` from the `option1` directory.
 
 One drawback is the `unresolved import 'sut' message`, which prevents VS Code from finding the function if you open `sut_test.py`, right-click on the `some_method_that_returns_string()` and choose `Go to Definition` (or press F12).
 
@@ -73,7 +75,7 @@ To debug, you need to create a Python debug configuration like below:
             "type": "python",
             "request": "launch",
             "module": "option2.${fileBasenameNoExtension}",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/code"
         },
 
@@ -89,7 +91,6 @@ If you want to execute `option2.sut_test`, open the Terminal, navigate to the `c
 
 ## Summary
 
-
 Item | Option 1 | Option 2
 ---------|----------|---------
 Package (`__init__.py` present) | No | Yes
@@ -97,3 +98,6 @@ Debug zero setup | Yes | No
 Debug Config | Python: Current File | Python: Module
 Execute code | `python3 sut.py` | `python3 -m option2.sut`
 Current work dir | `code\option1`| `code`
+Relative module import | No | Yes
+Module import error | Yes | No
+Go to Definition works | No | Yes
